@@ -29,6 +29,7 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#roadmap">Usage</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -55,7 +56,7 @@ The templates here are setup some in both Swedish and English and some only in S
 - [ ] Create presentation template
 - [ ] Create thesis template
 
-<!-- Installation -->
+<!-- Usage -->
 ## Usage
 
 In order to use the templates, you need to have a LaTeX distribution installed on your computer. Some of the templates are setup to use a separate preamble file which can be found in the preamble folder and is required to be located in the same folder as the main file in order for the template to work properly. Other templates are standalone and do not require a separate preamble file.
