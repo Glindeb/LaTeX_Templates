@@ -1,0 +1,285 @@
+\documentclass{report}
+
+% Preamble import
+\usepackage{hand_in_eng_preamble}
+\usepackage{xsavebox} %save content for repeated use
+\usepackage{atbegshi} %insert material on every page
+\usepackage{wrapfig}
+\usepackage{gauss}
+
+% Backgorund setup
+\xsavebox{PagePicture}{%
+  \begin{tikzpicture}
+  \node[opacity=0.1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{logo_water_mark.1}};
+  \end{tikzpicture}
+}
+
+% For numbering inside aling*
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+% Column setup
+\usepackage[]{multicol}
+\setlength{\columnsep}{1cm} % space between columns
+\setlength{\columnseprule}{1pt} % vertical line thickness
+
+% Specify Bibliography File/Files
+% \addbibresource{b_1.bib}
+
+% Specify Report Title, Author m.m.
+\title{Hand-in 1}
+\author{Gabriel Lindeblad, ..., ..., ...} % Author
+\date{2024} % Date
+
+% New command for matrix structure
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\g@matrix
+ {\vbox\bgroup}
+ {\vbox\bgroup\normalbaselines}% restore the standard baselineskip
+ {}{}
+\makeatother
+
+\newcommand{\BAR}{%
+  \hspace{-\arraycolsep}%
+  \strut\vrule % the `\vrule` is as high and deep as a strut
+  \hspace{-\arraycolsep}%
+}
+
+% Start document
+\begin{document}
+
+\renewcommand{\contentsname}{Contents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 Titel Page setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+    \vspace*{2.5cm}
+	\centering
+	{\Huge\bfseries Hand-in ...\par}
+    \vspace{0.4cm}
+    {\large\itshape [Course] \par}
+	\vspace{1cm}
+	\vfill
+
+	\Large{\bfseries Group members:\par } Gabriel Lindeblad [-], \par ... [-], \par
+    ... [-], \par
+    ... [-]
+
+
+% Bottom of the page
+	%{\Large \today\par}
+    \vspace{1.5cm}
+    \includegraphics[width=0.75\textwidth]{LU_RGB_ENG.png}
+    \vspace*{0.5cm}
+
+\end{titlepage}
+
+% \pdfbookmark[section]{\contentsname}{toc}
+% \tableofcontents
+\newpage
+
+%position background picture absolutely (w.r.t. upper left page corner) on every page
+\AtBeginShipout{
+  \AtBeginShipoutUpperLeft{\raisebox{-\height}{\xusebox{PagePicture}}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Example section for commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Here is a collection of some useful custom commands and how to use them
+% in the document as well as a description of their function.
+%
+% #######################################################
+% Custom commands list:
+% 	- \thm{Titel}{Innehåll}		--> Theroem
+% 	- \cor{Titel}{Innehåll}		--> ...
+% 	- \mlenma{Titel}{Innehåll}	--> Lemma
+% 	- \mprop{Titel}{Innehåll}	--> Proposition
+% 	- \clm{Titel}{}{Innehåll}	--> Solution
+% 	- \ex{Titel}{Innehåll}		--> Example
+% 	- \dfnc{Titel}{Innehåll}		--> Definition (chapter)
+% 	- \dfn{Titel}{Innehåll}		--> Definition (section)
+% 	- \qs{Titel}{Innehåll}		--> Question
+% 	- \nt{Innehåll}				--> Note (Note)
+%   - \sol{}                    --> Solution
+% #######################################################
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Start of main section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 1}
+    [Question 1]
+}
+
+
+\clm{}{}{
+    [Answer 1]
+}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 2}
+    [Question 2]
+}
+
+\clm{}{}{
+    [Answer 2]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 3}
+    [Question 3]
+}
+
+\clm{}{}{
+    [Answer 3]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 4}
+    [Question 4]
+}
+
+\clm{}{}{
+    [Answer 4]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 5}
+    [Question 5]
+}
+
+\clm{}{}{
+    [Answer 5]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 6}
+    [Question 6]
+}
+
+\clm{}{}{
+    [Answer 6]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 7}
+    [Question 7]
+}
+
+\clm{}{}{
+    [Answer 7]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 8}
+    [Question 8]
+}
+
+\clm{}{}{
+    [Answer 8]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 9}
+    [Question 9]
+}
+
+\clm{}{}{
+    [Answer 9]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Question 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Question 10}
+    [Question 10]
+}
+
+\clm{}{}{
+    [Answer 10]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                Appendix setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\appendix
+
+%\chapter{}
+
+%\section{[section 1]}\label{app:a}
+%...
+
+
+%\section{[section 2]}\label{app:b}
+%...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                End of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

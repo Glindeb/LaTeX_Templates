@@ -1,0 +1,286 @@
+\documentclass{report}
+
+% Preamble import
+\usepackage{hand_in_sv_preamble}
+\usepackage{xsavebox} %save content for repeated use
+\usepackage{atbegshi} %insert material on every page
+\usepackage{wrapfig}
+\usepackage{gauss}
+
+% Backgorund setup
+\xsavebox{PagePicture}{%
+  \begin{tikzpicture}
+  \node[opacity=0.1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{logo_water_mark.1}};
+  \end{tikzpicture}
+}
+
+% For numbering inside aling*
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+% Column setup
+\usepackage[]{multicol}
+\setlength{\columnsep}{1cm} % space between columns
+\setlength{\columnseprule}{1pt} % vertical line thickness
+
+% Specify Bibliography File/Files
+% \addbibresource{b_1.bib}
+
+% Specify Report Title, Author m.m.
+\title{Inlämningsuppgift 1}
+\author{Gabriel Lindeblad, ..., ..., ...} % Author
+\date{2024} % Date
+
+% New command for matrix structure
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\g@matrix
+ {\vbox\bgroup}
+ {\vbox\bgroup\normalbaselines}% restore the standard baselineskip
+ {}{}
+\makeatother
+
+\newcommand{\BAR}{%
+  \hspace{-\arraycolsep}%
+  \strut\vrule % the `\vrule` is as high and deep as a strut
+  \hspace{-\arraycolsep}%
+}
+
+% Start document
+\begin{document}
+
+%\renewcommand{\contentsname}{Uppgifter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 Titel Page setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+    \vspace*{2.5cm}
+	\centering
+	{\Huge\bfseries Inlämningsuppgift ...\par}
+    \vspace{0.4cm}
+    {\large\itshape [Kurs] \par}
+	\vspace{1cm}
+	\vfill
+
+	\Large{\bfseries Gruppmedlemmar:\par } Gabriel Lindeblad [-], \par ... [-], \par
+    ... [-], \par
+    ... [-]
+
+
+% Bottom of the page
+	%{\Large \today\par}
+    \vspace{1.5cm}
+    \includegraphics[width=0.75\textwidth]{LU_RGB_SV.png}
+    \vspace*{0.5cm}
+
+\end{titlepage}
+
+% \pdfbookmark[section]{\contentsname}{toc}
+% \tableofcontents
+\newpage
+
+%position background picture absolutely (w.r.t. upper left page corner) on every page
+\AtBeginShipout{
+  \AtBeginShipoutUpperLeft{\raisebox{-\height}{\xusebox{PagePicture}}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Example section for commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Here is a collection of some useful custom commands and how to use them
+% in the document as well as a description of their function.
+%
+% #######################################################
+% Custom commands list:
+% 	- \thm{Titel}{Innehåll}		--> Sats
+% 	- \cor{Titel}{Innehåll}		--> Följdsats
+% 	- \mlenma{Titel}{Innehåll}	--> Antagande
+% 	- \mprop{Titel}{Innehåll}	--> Förslag
+% 	- \clm{Titel}{}{Innehåll}	--> Lösning
+% 	- \ex{Titel}{Innehåll}		--> Exempel
+% 	- \dfnc{Titel}{Innehåll}		--> Definition (chapter)
+% 	- \dfn{Titel}{Innehåll}		--> Definition (section)
+% 	- \qs{Titel}{Innehåll}		--> Fråga
+% 	- \nt{Innehåll}				--> Anteckning (Note)
+%   - \sol{}                    --> Lösning
+% #######################################################
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Start of main section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 1}
+    [Fråga 1]
+}
+
+
+\clm{}{}{
+    [Svar 1]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 2}
+    [Fråga 2]
+}
+
+\clm{}{}{
+    [Svar 2]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 3}
+    [Fråga 3]
+}
+
+\clm{}{}{
+    [Svar 3]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 4}
+    [Fråga 4]
+}
+
+\clm{}{}{
+    [Svar 4]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 5}
+    [Fråga 5]
+}
+
+\clm{}{}{
+    [Svar 5]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 6}
+    [Fråga 6]
+}
+
+\clm{}{}{
+    [Svar 6]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 7}
+    [Fråga 7]
+}
+
+\clm{}{}{
+    [Svar 7]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 8}
+    [Fråga 8]
+}
+
+\clm{}{}{
+    [Svar 8]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 9}
+    [Fråga 9]
+}
+
+\clm{}{}{
+    [Svar 9]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Fråga 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\qs{}{
+    \addcontentsline{toc}{chapter}{Fråga 10}
+    [Fråga 10]
+}
+
+\clm{}{}{
+    [Svar 10]
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                Appendix setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\appendix
+
+%\chapter{}
+
+%\section{[section 1]}\label{app:a}
+%...
+
+
+%\section{[section 2]}\label{app:b}
+%...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                End of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,262 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{pdfpages}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\usepackage{attachfile}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{[Name]} % Your Name
+\newcommand{\city}{[Postal code] [City]} % Your city & Postal code
+\newcommand{\addr}{[Address]} % Your address
+\newcommand{\phone}{[Phone number]} % Your Phone Number
+\newcommand{\emaila}{[E-mail]} % Email 1
+\newcommand{\birth}{[Date of birth]} % Your Date of Birth
+
+
+
+
+\begin{document}
+\fontfamily{cmss}\selectfont
+% mabye use (ptm, cmr, cmss)
+%----------HEADING-----------------
+
+
+\parbox{2.6cm}{%
+\includegraphics[width=2.5cm,clip,height=2.9cm]{Portrait_Placeholder.png} % Change the image to your profile picture
+}
+\parbox{\dimexpr\linewidth-3cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {}\\
+  \addr & {} \\
+  \city & {} \\
+  {Telefon: \phone} & {} \\
+  \href{mailto:\emaila}{E-mail: \emaila} & \href{https://github.com/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profil: https://github.com/[Profile]}} \\
+  {Date of birth: \birth} & \href{https://www.linkedin.com/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn: https://linkedin.com/in/[Profile]}} \\
+  \vfill
+\end{tabularx}
+}
+
+\section{\textbf{Work Experiences}}
+  \resumeSubHeadingListStart
+    \resumeSubheading % Job title item
+      {~[Company]}{[Location]}
+      {~[Work type]}{[Duration]}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+        \item {[Work description]}
+      \resumeItemListEnd
+
+      % Under here you can extra work items.
+      % \resumeSubheading
+      % {~[Company]}{[Location]}
+      % {~[Work type]}{[Duration]}
+      % \vspace{-2.0mm}
+      % \resumeItemListStart
+      %   \item {[Work description]}
+      % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-6.5mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{[Experiences]}}
+\resumeSubHeadingListStart
+  \resumeSubheading
+      {~[Experience]}{[Location]} % Project Name, Location Name
+      {~[Project title/Project type]} % Project title/Project type
+      {[Duration]} % Event Dates
+      \vspace{-1.0mm}
+      \resumeItemListStart % Bullet points of notable parts of the project
+        \item {[Point 1]}
+        \item {[Point 2]}
+        \item { ... }
+      \resumeItemListEnd
+
+      % Under here you can extra experience items.
+      % \resumeSubheading
+      % {~[Experience]}{[Location]} % Project Name, Location Name
+      % {~[Project title/Project type]} % Project title/Project type
+      % {[Duration]} % Event Dates
+      % \vspace{-1.0mm}
+      % \resumeItemListStart % Bullet points of notable parts of the project
+      %   \item {[Point 1]}
+      %   \item {[Point 2]}
+      %   \item { ... }
+      % \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6.5mm}
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart % Education list start
+    \resumeSubheading % Education list item
+      {~[Education level]}{}
+      {~[Specialization], [School]}{(Expected) [Graduation date]}
+
+      % Under here you can extra education items.
+      % \resumeSubheading
+      % {~[Education level]}{}
+      % {~[Specialization], [School]}{(Expected) [Graduation date]}
+
+  \resumeSubHeadingListEnd
+\vspace{-3.5mm}
+%
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical skills}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{[Category]}{: [Skill 1], [Skill 2], [Skill 3]} \\
+     \textbf{[Category]}{: [Skill 1], [Skill 2]} \\
+     \textbf{[Category]}{: [Skill 1], [Skill 2]}
+    }}
+ \end{itemize}
+ \vspace{-8.5pt}
+
+%-----------Technical skills-----------------
+\section{\textbf{Languages}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{[Language 1]}{: [Proficiency level]} \\
+     \textbf{[Language 2]}{: [Proficiency level]} \\
+    }}
+ \end{itemize}
+ \vspace{-8.5pt}
+
+%-----------Technical skills-----------------
+\section{\textbf{Other}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{[Intrests]}{: [Intrest 1], [Intrest 2], [Intrest 3], [Intrest 4], ...} \\
+     \textbf{[Personal ability's]}{: [Ability 1], [Ability 2], [Ability 3], ...} \\
+	   \textbf{Drivers license}{: [Type] } \\
+    }}
+ \end{itemize}
+ \vspace{-8.5pt}
+
+%-----------References-----------------
+\section{\textbf{References}}
+See attached files for references.
+%-------------------------------------------
+
+\includepdf[pages=-,pagecommand={},width=\textwidth]{References.pdf}
+
+\end{document}

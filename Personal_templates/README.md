@@ -1,0 +1,3 @@
+# Info
+
+Here i store my personal templates adapted to my needs for everything from note taking to reports, presentations & hand in assignments...
